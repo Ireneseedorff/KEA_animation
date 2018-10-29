@@ -1,3 +1,7 @@
+body {
+    margin: 0;
+}
+
 /******** GAME *********/
 
 #game_background {
@@ -20,7 +24,7 @@
     z-index: 1;
     position: absolute;
     left: 1vw;
-    top: 40vw;
+    top: 39vw;
 }
 
 #time {
@@ -41,10 +45,11 @@
     background-size: 100%;
     width: 6vw;
     height: 10vw;
-    z-index: 1;
+    z-index: 3;
     position: absolute;
     left: 50vw;
     top: 10vw;
+    animation-delay: 5s;
 
 }
 
@@ -54,10 +59,11 @@
     background-size: 100%;
     width: 6vw;
     height: 10vw;
-    z-index: 1;
+    z-index: 3;
     position: absolute;
     left: 40vw;
     top: 10vw;
+    animation-delay: 3s;
 
 }
 
@@ -67,7 +73,7 @@
     background-size: 100%;
     width: 6vw;
     height: 10vw;
-    z-index: 1;
+    z-index: 3;
     position: absolute;
     left: 30vw;
     top: 10vw;
@@ -80,10 +86,11 @@
     background-size: 100%;
     width: 5vw;
     height: 8vw;
-    z-index: 1;
+    z-index: 3;
     position: absolute;
     left: 20vw;
     top: 10vw;
+    animation-delay: 3s;
 
 }
 
@@ -93,10 +100,11 @@
     background-size: 100%;
     width: 5vw;
     height: 8vw;
-    z-index: 1;
+    z-index: 3;
     position: absolute;
     left: 60vw;
     top: 10vw;
+    animation-delay: 1s;
 
 }
 
@@ -106,10 +114,11 @@
     background-size: 100%;
     width: 5vw;
     height: 8vw;
-    z-index: 1;
+    z-index: 3;
     position: absolute;
     left: 70vw;
     top: 10vw;
+    animation-delay: 3s;
 
 }
 
@@ -119,10 +128,10 @@
     background-size: 100%;
     width: 5vw;
     height: 8vw;
-    z-index: 1;
+    z-index: 3;
     position: absolute;
-    left: 80vw;
     top: 10vw;
+    animation-delay: 2s;
 
 }
 
@@ -132,11 +141,38 @@
     background-size: 100%;
     width: 5vw;
     height: 10vw;
-    z-index: 1;
+    z-index: 3;
     position: absolute;
-    left: 90vw;
-    top: 10vw;
 
+    top: 10vw;
+    animation-delay: 1s;
+
+}
+
+.left8 {
+    left: 80vw;
+}
+
+.left9 {
+    left: 90vw;
+}
+
+.fall_down {
+    animation-name: fall_down;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in;
+}
+
+@keyframes fall_down {
+    from {
+        transform: translateY(-70vw);
+    }
+
+    to {
+        transform: translateY(100vw);
+    }
 }
 
 /******** START *********/
