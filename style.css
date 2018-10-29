@@ -1,0 +1,231 @@
+/******** GAME *********/
+
+#game_background {
+    background-image: url("Spilsk%C3%A6rm.svg");
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    position: absolute;
+    overflow: hidden;
+    margin: none;
+    top: 0;
+    left: 0;
+}
+
+#energy {
+    background-image: url("Barometer.svg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    width: 6vw;
+    height: 17vw;
+    z-index: 1;
+    position: absolute;
+    left: 1vw;
+    top: 40vw;
+}
+
+#time {
+    background-image: url("Tid.svg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    width: 15vw;
+    height: 12vw;
+    z-index: 1;
+    position: absolute;
+    left: 83vw;
+    top: 44vw;
+}
+
+#hojtaler {
+    background-image: url("hojtaler.svg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    width: 25vw;
+    height: 17vw;
+    z-index: 3;
+    position: absolute;
+    left: 55vw;
+    top: 40vw;
+    display: none;
+}
+
+#settings {
+    background-image: url("Setting.svg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    width: 6vw;
+    height: 6vw;
+    z-index: 1;
+    position: absolute;
+    left: 1vw;
+    top: 52vw;
+    display: none;
+}
+
+
+/******** START *********/
+
+#menu_background {
+    background-image: url("Startsk%C3%A6rm.svg");
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    position: absolute;
+    overflow: hidden;
+    margin: none;
+    top: 0;
+    left: 0;
+}
+
+#hojtaler {
+    background-image: url("hojtaler.svg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    width: 25vw;
+    height: 17vw;
+    z-index: 3;
+    position: absolute;
+    left: 55vw;
+    top: 40vw;
+}
+
+#settings {
+    background-image: url("Setting.svg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    width: 6vw;
+    height: 6vw;
+    z-index: 1;
+    position: absolute;
+    left: 1vw;
+    top: 52vw;
+}
+
+
+/******** SETTINGS *********/
+
+#game_background {
+    background-image: url("Startsk%C3%A6rm.svg");
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    position: absolute;
+    overflow: hidden;
+    margin: none;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+}
+
+#settings #indstillinger {
+    background-image: url("indstillinger.svg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    width: 40vw;
+    height: 30vw;
+    z-index: 3;
+    position: absolute;
+    left: 54vw;
+    top: 5vw;
+}
+
+#settings #karakter {
+    background-image: url("Karakter.svg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    width: 30vw;
+    height: 50vw;
+    z-index: 3;
+    position: absolute;
+    left: 20vw;
+    top: 17vw;
+    transform: scaleX(-1);
+
+}
+
+/******** GAMEOVER *********/
+
+#gameover #game_background {
+    background-image: url("Spilsk%C3%A6rm.svg");
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    position: absolute;
+    overflow: hidden;
+    margin: none;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+}
+
+#gameover #game_over {
+    background-image: url("game_over.svg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    width: 40vw;
+    height: 30vw;
+    z-index: 3;
+    position: absolute;
+    left: 54vw;
+    top: 5vw;
+}
+
+#gameover #karakter {
+    background-image: url("Karakter.svg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    width: 30vw;
+    height: 50vw;
+    z-index: 3;
+    position: absolute;
+    left: 20vw;
+    top: 17vw;
+    transform: scaleX(-1);
+
+}
+
+/******** GAMECOMPLETE *********/
+
+#gamecomplete #game_background {
+    background-image: url("Spilsk%C3%A6rm.svg");
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    position: absolute;
+    overflow: hidden;
+    margin: none;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+}
+
+#levelcomplete #game_complete {
+    background-image: url("game_complete.svg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    width: 40vw;
+    height: 30vw;
+    z-index: 3;
+    position: absolute;
+    left: 54vw;
+    top: 5vw;
+}
+
+#gamecomplete #karakter {
+    background-image: url("Karakter.svg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    width: 30vw;
+    height: 50vw;
+    z-index: 3;
+    position: absolute;
+    left: 20vw;
+    top: 17vw;
+    transform: scaleX(-1);
+
+}
