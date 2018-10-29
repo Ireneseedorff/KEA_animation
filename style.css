@@ -2,11 +2,12 @@
 
 #game_background {
     background-image: url("Spilsk%C3%A6rm.svg");
-    background-size: cover;
-    width: 100%;
-    height: 100%;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    width: 100vw;
+    height: 56.25vw;
     z-index: 1;
-    position: absolute;
+    position: relative;
     overflow: hidden;
     margin: none;
     top: 0;
@@ -37,46 +38,125 @@
     top: 44vw;
 }
 
-#hojtaler {
-    background-image: url("hojtaler.svg");
+#fluesvamp1 {
+    background-image: url("Fluesvamp1.svg");
     background-repeat: no-repeat;
     background-size: 100%;
-    width: 25vw;
-    height: 17vw;
-    z-index: 3;
-    position: absolute;
-    left: 55vw;
-    top: 40vw;
-    display: none;
-}
-
-#settings {
-    background-image: url("Setting.svg");
-    background-repeat: no-repeat;
-    background-size: 100%;
-    width: 6vw;
-    height: 6vw;
+    width: 10vw;
+    height: 12vw;
     z-index: 1;
     position: absolute;
-    left: 1vw;
-    top: 52vw;
+    left: 50vw;
+    top: 44vw;
     display: none;
 }
 
+#fluesvamp2 {
+    background-image: url("Fluesvamp2.svg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    width: 10vw;
+    height: 12vw;
+    z-index: 1;
+    position: absolute;
+    left: 40vw;
+    top: 44vw;
+    display: none;
+}
+
+#fluesvamp3 {
+    background-image: url("Fluesvamp3.svg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    width: 10vw;
+    height: 12vw;
+    z-index: 1;
+    position: absolute;
+    left: 30vw;
+    top: 44vw;
+    display: none;
+}
+
+#redbull {
+    background-image: url("Redbull.svg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    width: 7vw;
+    height: 12vw;
+    z-index: 1;
+    position: absolute;
+    left: 20vw;
+    top: 44vw;
+    display: none;
+}
+
+#godsvamp1 {
+    background-image: url("God%20svamp1.svg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    width: 5vw;
+    height: 12vw;
+    z-index: 1;
+    position: absolute;
+    left: 40vw;
+    top: 30vw;
+    display: none;
+}
+
+#godsvamp2 {
+    background-image: url("God%20svamp2.svg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    width: 5vw;
+    height: 12vw;
+    z-index: 1;
+    position: absolute;
+    left: 30vw;
+    top: 30vw;
+    display: none;
+}
+
+#godsvamp3 {
+    background-image: url("God%20svamp3.svg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    width: 5vw;
+    height: 12vw;
+    z-index: 1;
+    position: absolute;
+    left: 20vw;
+    top: 30vw;
+    display: none;
+}
+
+#godsvamp4 {
+    background-image: url("God%20svamp4.svg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    width: 5vw;
+    height: 12vw;
+    z-index: 1;
+    position: absolute;
+    left: 10vw;
+    top: 30vw;
+    display: none;
+}
 
 /******** START *********/
 
 #menu_background {
     background-image: url("Startsk%C3%A6rm.svg");
-    background-size: cover;
-    width: 100%;
-    height: 100%;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    width: 100vw;
+    height: 56.25vw;
     z-index: 1;
-    position: absolute;
+    position: relative;
     overflow: hidden;
     margin: none;
     top: 0;
     left: 0;
+    display: none;
 }
 
 #hojtaler {
@@ -101,6 +181,7 @@
     position: absolute;
     left: 1vw;
     top: 52vw;
+    display: none;
 }
 
 
@@ -108,16 +189,17 @@
 
 #game_background {
     background-image: url("Startsk%C3%A6rm.svg");
-    background-size: cover;
-    width: 100%;
-    height: 100%;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    width: 100vw;
+    height: 56.25vw;
     z-index: 1;
-    position: absolute;
+    position: relative;
     overflow: hidden;
     margin: none;
     top: 0;
     left: 0;
-    overflow: hidden;
+
 }
 
 #settings #indstillinger {
@@ -130,6 +212,7 @@
     position: absolute;
     left: 54vw;
     top: 5vw;
+    display: none;
 }
 
 #settings #karakter {
@@ -143,6 +226,7 @@
     left: 20vw;
     top: 17vw;
     transform: scaleX(-1);
+    display: none;
 
 }
 
@@ -150,16 +234,17 @@
 
 #gameover #game_background {
     background-image: url("Spilsk%C3%A6rm.svg");
-    background-size: cover;
-    width: 100%;
-    height: 100%;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    width: 100vw;
+    height: 56.25vw;
     z-index: 1;
-    position: absolute;
+    position: relative;
     overflow: hidden;
     margin: none;
     top: 0;
     left: 0;
-    overflow: hidden;
+
 }
 
 #gameover #game_over {
@@ -172,6 +257,7 @@
     position: absolute;
     left: 54vw;
     top: 5vw;
+    display: none;
 }
 
 #gameover #karakter {
@@ -185,6 +271,7 @@
     left: 20vw;
     top: 17vw;
     transform: scaleX(-1);
+    display: none;
 
 }
 
@@ -192,16 +279,17 @@
 
 #gamecomplete #game_background {
     background-image: url("Spilsk%C3%A6rm.svg");
-    background-size: cover;
-    width: 100%;
-    height: 100%;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    width: 100vw;
+    height: 56.25vw;
     z-index: 1;
-    position: absolute;
+    position: relative;
     overflow: hidden;
     margin: none;
     top: 0;
     left: 0;
-    overflow: hidden;
+
 }
 
 #levelcomplete #game_complete {
@@ -214,6 +302,7 @@
     position: absolute;
     left: 54vw;
     top: 5vw;
+    display: none;
 }
 
 #gamecomplete #karakter {
@@ -227,5 +316,6 @@
     left: 20vw;
     top: 17vw;
     transform: scaleX(-1);
+    display: none;
 
 }
