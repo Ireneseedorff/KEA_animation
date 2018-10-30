@@ -10,49 +10,44 @@
 
 <body>
     <div id="screen">
-
+        <div id="menu_background" class="hide"></div>
 
         <!---GAME--->
         <div id="game">
 
-            <div id="game_background"></div>
+            <div id="game_background" class="hide show"></div>
 
             <div id="game_elements">
-                <div id="fluesvamp1" class="fall_down"></div>
-                <div id="fluesvamp2" class="fall_down"></div>
-                <div id="fluesvamp3" class="fall_down"></div>
-                <div id="redbull" class="fall_down"></div>
-                <div id="godsvamp1" class="fall_down"></div>
-                <div id="godsvamp2" class="fall_down"></div>
-                <div id="godsvamp3" class="fall_down left9"></div>
-                <div id="godsvamp4" class="fall_down left8"></div>
+                <div id="fluesvamp1" class="fall_down hide"></div>
+                <div id="fluesvamp2" class="fall_down hide"></div>
+                <div id="fluesvamp3" class="fall_down hide"></div>
+                <div id="redbull" class="fall_down hide"></div>
+                <div id="godsvamp1" class="fall_down hide"></div>
+                <div id="godsvamp2" class="fall_down hide"></div>
+                <div id="godsvamp3" class="fall_down left9 hide"></div>
+                <div id="godsvamp4" class="fall_down left8 hide"></div>
             </div>
 
             <div id="game_ui">
-                <div id="points"></div>
-                <div id="energy"></div>
-                <div id="time"></div>
+                <div id="points" class="hide"></div>
+                <div id="energy" class="hide"></div>
+                <div id="time" class="hide"></div>
 
             </div>
         </div>
 
         <!---START--->
-        <div id="start">
-            <div id="menu_background"></div>
+        <div id="start" class="hide">
+            <div id="play" class="pulse"></div>
 
 
             <div id="game_elements">
-
-            </div>
-
-            <div id="game_ui">
-                <div id="points"></div>
-                <div id="energy"></div>
-                <div id="time"></div>
-
+                <div id="karakter"></div>
+                <div id="settings"></div>
             </div>
         </div>
-        <!---SETTINGS--->
+
+        <!---SETTINGS
         <div id="settings">
 
 
@@ -69,7 +64,8 @@
 
             </div>
         </div>
-        <!---GAMEOVER--->
+        --->
+        <!---GAMEOVER
         <div id="gameover">
 
 
@@ -85,7 +81,8 @@
 
             </div>
         </div>
-        <!---LEVELCOMPLETE--->
+        --->
+        <!---LEVELCOMPLETE
         <div id="levelcomplete">
 
             <div id="game_complete"></div>
@@ -101,7 +98,10 @@
 
             </div>
         </div>
+        --->
+
     </div>
+    <script src="script.js"></script>
 </body>
 
 </html>
