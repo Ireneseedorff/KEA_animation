@@ -104,7 +104,7 @@ body {
 
 }
 
-#settings {
+#settings_button {
     background-image: url("Setting.svg");
     background-repeat: no-repeat;
     background-size: 100%;
@@ -130,25 +130,25 @@ body {
     overflow: hidden;
 }
 
-#energy {
+#game #energy {
     background-image: url("Barometer.svg");
     background-repeat: no-repeat;
     background-size: 100%;
     width: 6vw;
     height: 17vw;
-    z-index: 1;
+    z-index: 3;
     position: absolute;
     left: 1vw;
     top: 39vw;
 }
 
-#time {
+#game #time {
     background-image: url("Tid.svg");
     background-repeat: no-repeat;
     background-size: 100%;
     width: 15vw;
     height: 12vw;
-    z-index: 1;
+    z-index: 3;
     position: absolute;
     left: 83vw;
     top: 44vw;
@@ -319,10 +319,9 @@ body {
     position: absolute;
     left: 54vw;
     top: 5vw;
-    display: none;
 }
 
-#settings #karakter {
+#karakter2 {
     background-image: url("Karakter.svg");
     background-repeat: no-repeat;
     background-size: 100%;
@@ -333,7 +332,6 @@ body {
     left: 20vw;
     top: 17vw;
     transform: scaleX(-1);
-    display: none;
 
 }
 
@@ -353,7 +351,7 @@ body {
     display: none;
 }
 
-#gameover #karakter {
+#karakter2 {
     background-image: url("Karakter.svg");
     background-repeat: no-repeat;
     background-size: 100%;
@@ -364,8 +362,6 @@ body {
     left: 20vw;
     top: 17vw;
     transform: scaleX(-1);
-    display: none;
-
 }
 
 /******** GAMECOMPLETE *********/
@@ -395,5 +391,19 @@ body {
     top: 17vw;
     transform: scaleX(-1);
     display: none;
+
+}
+
+#karakter2 {
+    background-image: url("Karakter.svg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    width: 30vw;
+    height: 50vw;
+    z-index: 3;
+    position: absolute;
+    left: 20vw;
+    top: 17vw;
+    transform: scaleX(-1);
 
 }
