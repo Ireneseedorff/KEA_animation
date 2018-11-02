@@ -2,7 +2,7 @@ body {
     margin: 0;
 }
 
-#scene {
+#screen {
     position: relative;
     width: 100vw;
     height: 56.25vw;
@@ -94,12 +94,12 @@ body {
     background-image: url("Karakter.svg");
     background-repeat: no-repeat;
     background-size: 100%;
-    width: 16vw;
+    width: 17vw;
     height: 28vw;
     z-index: 3;
     position: absolute;
     left: 35vw;
-    top: 28vw;
+    top: 26vw;
     transform: scaleX(-1);
 
 }
@@ -130,7 +130,7 @@ body {
     overflow: hidden;
 }
 
-#game #energy {
+#energy {
     background-image: url("Barometer.svg");
     background-repeat: no-repeat;
     background-size: 100%;
@@ -138,11 +138,12 @@ body {
     height: 17vw;
     z-index: 3;
     position: absolute;
+    font-family: 'Nosifer', cursive;
     left: 1vw;
     top: 39vw;
 }
 
-#game #time {
+#time {
     background-image: url("Tid.svg");
     background-repeat: no-repeat;
     background-size: 100%;
@@ -154,13 +155,25 @@ body {
     top: 44vw;
 }
 
+#points {
+    width: 5vw;
+    height: 5vw;
+    z-index: 3;
+    position: absolute;
+    left: 1.3vw;
+    top: 0vw;
+    color: white;
+    font-family: 'Nosifer', cursive;
+    font-size: 2rem;
+}
+
 #fluesvamp1 {
     background-image: url("Fluesvamp1.svg");
     background-repeat: no-repeat;
     background-size: 100%;
     width: 6vw;
     height: 10vw;
-    z-index: 3;
+    z-index: 4;
     position: absolute;
     left: 50vw;
     top: -10vw;
@@ -175,7 +188,7 @@ body {
     background-size: 100%;
     width: 6vw;
     height: 10vw;
-    z-index: 3;
+    z-index: 4;
     position: absolute;
     left: 40vw;
     top: -10vw;
@@ -189,7 +202,7 @@ body {
     background-size: 100%;
     width: 6vw;
     height: 10vw;
-    z-index: 3;
+    z-index: 4;
     position: absolute;
     left: 30vw;
     top: -10vw;
@@ -202,7 +215,7 @@ body {
     background-size: 100%;
     width: 5vw;
     height: 8vw;
-    z-index: 3;
+    z-index: 4;
     position: absolute;
     left: 20vw;
     top: -10vw;
@@ -216,7 +229,7 @@ body {
     background-size: 100%;
     width: 5vw;
     height: 8vw;
-    z-index: 3;
+    z-index: 4;
     position: absolute;
     left: 60vw;
     top: -10vw;
@@ -246,6 +259,7 @@ body {
     height: 8vw;
     z-index: 3;
     position: absolute;
+    left: 75vw;
     top: -10vw;
     animation-delay: 2s;
 
@@ -259,9 +273,10 @@ body {
     height: 10vw;
     z-index: 3;
     position: absolute;
-
+    left: 25vw;
     top: -10vw;
     animation-delay: 1s;
+
 
 }
 
@@ -275,7 +290,7 @@ body {
 
 .fall_down {
     animation-name: fall_down;
-    animation-duration: 4s;
+    animation-duration: 10s;
     animation-iteration-count: infinite;
     animation-fill-mode: forwards;
     animation-timing-function: ease-in;
@@ -283,11 +298,11 @@ body {
 
 @keyframes fall_down {
     from {
-        transform: translateY(-70vw);
+        transform: translateY(-10vw);
     }
 
     to {
-        transform: translateY(100vw);
+        transform: translateY(70vw);
     }
 }
 
@@ -310,7 +325,7 @@ body {
 }
 
 #indstillinger {
-    background-image: url("indstillinger.svg");
+    background-image: url("indstillinger_ny.svg");
     background-repeat: no-repeat;
     background-size: 100%;
     width: 40vw;
@@ -319,6 +334,42 @@ body {
     position: absolute;
     left: 54vw;
     top: 5vw;
+}
+
+#exit_button {
+    background-image: url("exit.svg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    width: 5vw;
+    height: 5vw;
+    z-index: 3;
+    position: absolute;
+    left: 85vw;
+    top: 9vw;
+}
+
+#music_button {
+    background-image: url("music_button.svg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    width: 5vw;
+    height: 5vw;
+    z-index: 3;
+    position: absolute;
+    left: 59vw;
+    top: 14.5vw;
+}
+
+#soundeffect_button {
+    background-image: url("soundeffect_button.svg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    width: 5vw;
+    height: 5vw;
+    z-index: 3;
+    position: absolute;
+    left: 59vw;
+    top: 20.5vw;
 }
 
 #karakter2 {
@@ -348,7 +399,6 @@ body {
     position: absolute;
     left: 54vw;
     top: 5vw;
-    display: none;
 }
 
 #karakter2 {
@@ -362,6 +412,32 @@ body {
     left: 20vw;
     top: 17vw;
     transform: scaleX(-1);
+}
+
+#menu_button {
+    background-image: url("menu_button.svg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    width: 13vw;
+    height: 10vw;
+    z-index: 3;
+    position: absolute;
+    left: 75vw;
+    top: 20vw;
+
+}
+
+#spiligen_button {
+    background-image: url("spil_igen_button.svg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    width: 13vw;
+    height: 10vw;
+    z-index: 3;
+    position: absolute;
+    left: 58vw;
+    top: 20vw;
+
 }
 
 /******** GAMECOMPLETE *********/
@@ -377,33 +453,4 @@ body {
     left: 54vw;
     top: 5vw;
     display: none;
-}
-
-#gamecomplete #karakter {
-    background-image: url("Karakter.svg");
-    background-repeat: no-repeat;
-    background-size: 100%;
-    width: 30vw;
-    height: 50vw;
-    z-index: 3;
-    position: absolute;
-    left: 20vw;
-    top: 17vw;
-    transform: scaleX(-1);
-    display: none;
-
-}
-
-#karakter2 {
-    background-image: url("Karakter.svg");
-    background-repeat: no-repeat;
-    background-size: 100%;
-    width: 30vw;
-    height: 50vw;
-    z-index: 3;
-    position: absolute;
-    left: 20vw;
-    top: 17vw;
-    transform: scaleX(-1);
-
 }

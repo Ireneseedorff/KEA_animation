@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SLETTEFESTEN</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Nosifer" rel="stylesheet">
 </head>
 
 <body>
@@ -17,20 +18,20 @@
 
             <div id="game_background" class="hide show"></div>
 
-            <div id="game_elements">
-                <div id="fluesvamp1" class="fall_down hide"></div>
-                <div id="fluesvamp2" class="fall_down hide"></div>
-                <div id="fluesvamp3" class="fall_down hide"></div>
-                <div id="redbull" class="fall_down hide"></div>
-                <div id="godsvamp1" class="fall_down hide"></div>
-                <div id="godsvamp2" class="fall_down hide"></div>
-                <div id="godsvamp3" class="fall_down left9 hide"></div>
-                <div id="godsvamp4" class="fall_down left8 hide"></div>
+            <div id="game_elements" class="hide">
+                <div id="fluesvamp1" class="fall_down fluesvamp"></div>
+                <div id="fluesvamp2" class="fall_down fluesvamp"></div>
+                <div id="fluesvamp3" class="fall_down fluesvamp"></div>
+                <div id="redbull" class="fall_down"></div>
+                <div id="godsvamp1" class="fall_down svamp"></div>
+                <div id="godsvamp2" class="fall_down svamp"></div>
+                <div id="godsvamp3" class="fall_down svamp"></div>
+                <div id="godsvamp4" class="fall_down svamp"></div>
             </div>
 
             <div id="game_ui" class="hide">
-                <div id="points"></div>
-                <div id="energy"></div>
+                <div id="points">0</div>
+                <div id="energy">3</div>
                 <div id="time"></div>
             </div>
         </div>
@@ -51,43 +52,30 @@
         <div id="settings" class="hide">
             <div id="indstillinger"></div>
             <div id="karakter2"></div>
+            <div id="exit_button" class="pulse"></div>
+            <div id="music_button"></div>
+            <div id="soundeffect_button"></div>
+        </div>
+
+        <!---GAMEOVER--->
+        <div id="gameover" class="hide">
+            <div id="game_over"></div>
+            <div id="karakter2"></div>
+            <div id="menu_button"></div>
+            <div id="spiligen_button"></div>
 
         </div>
 
-        <!---GAMEOVER
-        <div id="gameover">
+        <!---LEVELCOMPLETE--->
+        <div id="levelcomplete" class="hide">
 
+            <div id="game_complete" class="hide"></div>
+            <div id="karakter2" class="hide"></div>
+            <div id="menu_button"></div>
+            <div id="spiligen_button"></div>
 
-            <div id="game_elements">
-                <div id="game_over"></div>
-                <div id="karakter"></div>
-            </div>
-
-            <div id="game_ui">
-                <div id="points"></div>
-                <div id="energy"></div>
-                <div id="time"></div>
-
-            </div>
         </div>
-        --->
-        <!---LEVELCOMPLETE
-        <div id="levelcomplete">
 
-            <div id="game_complete"></div>
-            <div id="karakter"></div>
-            <div id="game_elements">
-
-            </div>
-
-            <div id="game_ui">
-                <div id="points"></div>
-                <div id="energy"></div>
-                <div id="time"></div>
-
-            </div>
-        </div>
-        --->
 
     </div>
     <script src="script.js"></script>
