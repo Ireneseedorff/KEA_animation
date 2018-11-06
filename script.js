@@ -1,5 +1,8 @@
 window.addEventListener("load", sidenVises);
 
+let showSettingsEffektSound = true;
+let showSettingsMusic = true;
+
 function sidenVises() {
     console.log("sidenVises");
     // nulstil alting
@@ -29,6 +32,7 @@ function showStart() {
     document.querySelector("#settings_button").addEventListener("click", showSettings);
 
 
+
 }
 
 function hideStart() {
@@ -50,8 +54,16 @@ function startGame() {
     // Skjul startskærm
     document.querySelector("#start").classList.add("hide");
     document.querySelector("#start").classList.remove("show");
+
+    //skul startskærm
+    document.querySelector("#gameover").classList.add("hide");
+    document.querySelector("#gameover").classList.remove("show");
+
     // Vis spilskærm
     document.querySelector("#game").classList.add("show");
+
+    //start music
+    document.querySelector("#myMusic").play();
 
     document.querySelector("#game_ui").classList.remove("hide");
     document.querySelector("#game_elements").classList.remove("hide");
@@ -124,6 +136,9 @@ function clickSvamp() {
     //her kanlder man på gamestatus så den kan undersøge hver gang hvor mange liv der må være tilbage
     gameStatus();
 
+    document.querySelector("#wuhu").play();
+    document.querySelector("#wuhu").currentTime = 0;
+
 }
 
 
@@ -147,6 +162,9 @@ function clickRedbull() {
     //her kanlder man på gamestatus så den kan undersøge hver gang hvor mange liv der må være tilbage
     gameStatus();
 
+    document.querySelector("#wuhu").play();
+    document.querySelector("#wuhu").currentTime = 0;
+
 }
 
 
@@ -158,9 +176,6 @@ function clickFluesvamp() {
     document.querySelector("#energy").innerHTML = "life: " + life;
     console.log(life);
 
-    // TODO: mist et liv
-    point -= 3;
-    console.log(point);
     // også TODO: Få eksplosionen til at virke igen - det må også vente
 
     document.querySelector("#points").textContent = point;
@@ -172,6 +187,9 @@ function clickFluesvamp() {
     //her kalder man på gamestatus så den kan undersøge hver gang hvor mange liv der må være tilbage
     gameStatus();
 
+    document.querySelector("#hvadlaverdu").play();
+    document.querySelector("#hvadlaverdu").currentTime = 0;
+
 }
 
 // SETTING KNAP
@@ -182,14 +200,17 @@ function showSettings() {
     document.querySelector("#settings").classList.remove("hide");
     document.querySelector("#settings").classList.remove("fade_out");
 
-    // Stop animation på startskærm
-    document.querySelector("#settings_button").classList.add("pulse");
     //Fade startskærm ud
     document.querySelector("#start").classList.add("fade_out");
     // Vis settings
     document.querySelector("#settings").classList.add("show");
+
     // Click to exit
     document.querySelector("#exit_button").addEventListener("click", hideSettings);
+
+    //settings music and effects
+    document.querySelector("#setting_effekt_sound").addEventListener("click", toggleSounds);
+    document.querySelector("#setting_music").addEventListener("click", toggleMusic);
 }
 
 function hideSettings() {
@@ -203,11 +224,76 @@ function hideSettings() {
     //Fade startskærm ud
     document.querySelector("#start").classList.remove("fade_out");
 
-    //   document.querySelector("#game_background").classList.remove("show");
-
     // når fade-animationen er færdig -> showstart
     document.querySelector("#settings").addEventListener("animationend", showStart);
 
+}
+
+function toggleSounds() {
+    console.log("toggle sounds");
+    if (showSettingsEffektSound == true) {
+        showSettingsEffektSound = false;
+        soundsOff();
+
+    } else {
+        showSettingsEffektSound = true;
+        soundsOn();
+
+    }
+
+}
+
+function soundsOff() {
+    console.log("sounds OFF");
+
+    document.querySelector("#soundeffect_button").classList.remove("soundeffect_button_on");
+    document.querySelector("#soundeffect_button").classList.add("soundeffect_button_off");
+
+    document.querySelector("#wuhu").muted = true;
+    document.querySelector("#hvadlaverdu").muted = true;
+
+}
+
+function soundsOn() {
+    console.log("sounds ON");
+    document.querySelector("#soundeffect_button").classList.add("soundeffect_button_on");
+    document.querySelector("#soundeffect_button").classList.remove("soundeffect_button_off");
+
+    document.querySelector("#wuhu").muted = false;
+    document.querySelector("#hvadlaverdu").muted = false;
+
+}
+
+function toggleMusic() {
+    console.log("toggle music");
+
+    if (showSettingsMusic == true) {
+        showSettingsMusic = false;
+        musicOff();
+
+    } else {
+        showSettingsMusic = true;
+        musicOn();
+
+    }
+}
+
+function musicOff() {
+    console.log("music OFF");
+
+    document.querySelector("#music_button").classList.remove("music_button_on");
+    document.querySelector("#music_button").classList.add("music_button_off");
+
+    document.querySelector("#myMusic").pause();
+
+}
+
+function musicOn() {
+    console.log("music ON");
+    document.querySelector("#music_button").classList.add("music_button_on");
+    document.querySelector("#music_button").classList.remove("music_button_off");
+
+    document.querySelector("#myMusic").play();
 }
 
 // SPIL SLUTTER
@@ -231,13 +317,42 @@ function gameOver() {
 
     document.querySelector("#gameover").classList.add("show");
 
-    // Click to menu
-    document.querySelector("#gameover").classList.remove("hide");
-    document.querySelector("#gameover").classList.remove("fade_out");
-    document.querySelector("#menu_button").addEventListener("click", showStart);
+
+    // Click to exit
+    document.querySelector("#menu_button").addEventListener("click", gotoMenu);
+    //click to play again
+    document.querySelector("#spiligen_button").addEventListener("click", gotoPlayagain);
+
+}
+
+function gotoMenu() {
+    console.log("go to menu");
+
+    //Fade gameover ud
+    document.querySelector("#gameover").classList.add("fade_out");
+
+    //Fade startskærm ud
+    document.querySelector("#start").classList.remove("fade_out");
+
+    // når fade-animationen er færdig -> showstart
+    document.querySelector("#gameover").addEventListener("animationend", showStart);
 
 
 }
+
+function gotoPlayagain() {
+    console.log("go to play again");
+
+    //Fade gameover ud
+    document.querySelector("#gameover").classList.add("fade_out");
+
+    // når fade-animationen er færdig -> showstart
+    document.querySelector("#gameover").addEventListener("animationend", startGame);
+
+}
+
+
+//GAME COMPLETE
 
 function levelCompleted() {
     console.log;

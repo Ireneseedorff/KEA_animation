@@ -131,16 +131,17 @@ body {
 }
 
 #energy {
-    background-image: url("Barometer.svg");
+    /*background-image: url("Barometer.svg");*/
     background-repeat: no-repeat;
     background-size: 100%;
-    width: 6vw;
+    width: 10vw;
     height: 17vw;
     z-index: 3;
     position: absolute;
     font-family: 'Nosifer', cursive;
+    color: white;
     left: 1vw;
-    top: 39vw;
+    top: 52vw;
 }
 
 #time {
@@ -188,7 +189,7 @@ body {
     background-size: 100%;
     width: 6vw;
     height: 10vw;
-    z-index: 4;
+    z-index: 7;
     position: absolute;
     left: 40vw;
     top: -10vw;
@@ -202,7 +203,7 @@ body {
     background-size: 100%;
     width: 6vw;
     height: 10vw;
-    z-index: 4;
+    z-index: 5;
     position: absolute;
     left: 30vw;
     top: -10vw;
@@ -229,7 +230,7 @@ body {
     background-size: 100%;
     width: 5vw;
     height: 8vw;
-    z-index: 4;
+    z-index: 3;
     position: absolute;
     left: 60vw;
     top: -10vw;
@@ -261,7 +262,7 @@ body {
     position: absolute;
     left: 75vw;
     top: -10vw;
-    animation-delay: 2s;
+    animation-delay: 0.5s;
 
 }
 
@@ -275,7 +276,8 @@ body {
     position: absolute;
     left: 25vw;
     top: -10vw;
-    animation-delay: 1s;
+    animation-delay: 9s;
+
 
 
 }
@@ -290,7 +292,7 @@ body {
 
 .fall_down {
     animation-name: fall_down;
-    animation-duration: 10s;
+    animation-duration: 7s;
     animation-iteration-count: infinite;
     animation-fill-mode: forwards;
     animation-timing-function: ease-in;
@@ -349,9 +351,6 @@ body {
 }
 
 #music_button {
-    background-image: url("music_button.svg");
-    background-repeat: no-repeat;
-    background-size: 100%;
     width: 5vw;
     height: 5vw;
     z-index: 3;
@@ -360,8 +359,36 @@ body {
     top: 14.5vw;
 }
 
+.music_button_off {
+    background-image: url("music_off.svg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    width: 5vw;
+    height: 5vw;
+    z-index: 3;
+    position: absolute;
+    left: 59vw;
+    top: 14.5vw;
+
+}
+
+.music_button_on {
+    background-image: url("music_button.svg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
 #soundeffect_button {
-    background-image: url("soundeffect_button.svg");
+    width: 5vw;
+    height: 5vw;
+    z-index: 3;
+    position: absolute;
+    left: 59vw;
+    top: 20.5vw;
+}
+
+.soundeffect_button_off {
+    background-image: url("soundeffect_off.svg");
     background-repeat: no-repeat;
     background-size: 100%;
     width: 5vw;
@@ -370,6 +397,12 @@ body {
     position: absolute;
     left: 59vw;
     top: 20.5vw;
+}
+
+.soundeffect_button_on {
+    background-image: url("soundeffect_button.svg");
+    background-repeat: no-repeat;
+    background-size: 100%;
 }
 
 #karakter2 {
