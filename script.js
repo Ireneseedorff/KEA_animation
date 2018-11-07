@@ -2,6 +2,7 @@ window.addEventListener("load", sidenVises);
 
 let showSettingsEffektSound = true;
 let showSettingsMusic = true;
+let timeLeft = 60;
 
 function sidenVises() {
     console.log("sidenVises");
@@ -51,6 +52,9 @@ function hideStart() {
 function startGame() {
     console.log("startGame");
     document.querySelector("#start").removeEventListener("animationend", startGame);
+
+    timeLeftFc();
+
     // Skjul startskærm
     document.querySelector("#start").classList.add("hide");
     document.querySelector("#start").classList.remove("show");
@@ -106,6 +110,20 @@ function naaetBunden() {
     console.log("har nået bunden");
 
     this.classList.remove("hide");
+}
+
+function timeLeftFc() {
+    console.log("timeLeft" + timeLeft);
+    document.querySelector("#time").innerHTML = timeLeft;
+
+    if (timeLeft > 0) {
+        timeLeft--;
+
+        setTimeout(timeLeftFc, 1000);
+    } else {
+        console.log("Nu er timeLeft = 0");
+        gameStatus();
+    }
 }
 
 let point = 0;
@@ -173,7 +191,7 @@ function clickFluesvamp() {
     console.log("click fluesvamp");
 
     life--;
-    document.querySelector("#energy").innerHTML = "life: " + life;
+    document.querySelector("#energy").innerHTML = life;
     console.log(life);
 
     // også TODO: Få eksplosionen til at virke igen - det må også vente
@@ -304,14 +322,27 @@ function gameStatus() {
     // her definerer man hvornår man dør, når der er x antal liv tilbage
     if (life <= 0) {
         gameOver();
-    }
-
+    } //else(point == 20) {
+    // gameComplete();
+    //}
 }
 
 //GAME OVER
 
 function gameOver() {
     console.log("game over");
+
+    // fjern elementer
+    document.querySelector("#fluesvamp1").classList.remove("fall_down");
+    document.querySelector("#fluesvamp2").classList.remove("fall_down");
+    document.querySelector("#fluesvamp3").classList.remove("fall_down");
+    document.querySelector("#redbull").classList.remove("fall_down");
+    document.querySelector("#godsvamp1").classList.remove("fall_down");
+    document.querySelector("#godsvamp2").classList.remove("fall_down");
+    document.querySelector("#godsvamp3").classList.remove("fall_down");
+    document.querySelector("#godsvamp4").classList.remove("fall_down");
+
+
     document.querySelector("#game").classList.add("hide");
     document.querySelector("#game").classList.remove("show");
 
@@ -355,6 +386,28 @@ function gotoPlayagain() {
 //GAME COMPLETE
 
 function levelCompleted() {
-    console.log;
+    console.log("game complete");
+
+    // fjern elementer
+    document.querySelector("#fluesvamp1").classList.remove("fall_down");
+    document.querySelector("#fluesvamp2").classList.remove("fall_down");
+    document.querySelector("#fluesvamp3").classList.remove("fall_down");
+    document.querySelector("#redbull").classList.remove("fall_down");
+    document.querySelector("#godsvamp1").classList.remove("fall_down");
+    document.querySelector("#godsvamp2").classList.remove("fall_down");
+    document.querySelector("#godsvamp3").classList.remove("fall_down");
+    document.querySelector("#godsvamp4").classList.remove("fall_down");
+
+
+    document.querySelector("#game").classList.add("hide");
+    document.querySelector("#game").classList.remove("show");
+
+    document.querySelector("#levelcomplete").classList.add("show");
+
+
+    // Click to exit
+    document.querySelector("#menu_button").addEventListener("click", gotoMenu);
+    //click to play again
+    document.querySelector("#spiligen_button").addEventListener("click", gotoPlayagain);
 
 }
