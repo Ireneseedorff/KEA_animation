@@ -165,6 +165,7 @@ body {
     top: 49vw;
     color: black;
     font-size: 2em;
+    font-family: monospace;
 }
 
 #hjerte {
@@ -508,5 +509,28 @@ body {
     position: absolute;
     left: 54vw;
     top: 5vw;
-    display: none;
+}
+
+#menu_button_complete {
+    background-image: url("menu_button.svg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    width: 13vw;
+    height: 10vw;
+    z-index: 3;
+    position: absolute;
+    left: 75vw;
+    top: 20vw;
+}
+
+#spiligen_button_complete {
+    background-image: url("spil_igen_button.svg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    width: 13vw;
+    height: 10vw;
+    z-index: 3;
+    position: absolute;
+    left: 58vw;
+    top: 20vw;
 }

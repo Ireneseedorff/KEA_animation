@@ -3,6 +3,8 @@ window.addEventListener("load", sidenVises);
 let showSettingsEffektSound = true;
 let showSettingsMusic = true;
 let timeLeft = 60;
+let point = 0;
+let life = 3;
 
 function sidenVises() {
     console.log("sidenVises");
@@ -46,6 +48,8 @@ function hideStart() {
 
     // når fade-animationen er færdig -> startgame
     document.querySelector("#start").addEventListener("animationend", startGame);
+
+
 }
 
 
@@ -62,6 +66,11 @@ function startGame() {
     //skul startskærm
     document.querySelector("#gameover").classList.add("hide");
     document.querySelector("#gameover").classList.remove("show");
+
+    //skul startskærm
+    document.querySelector("#levelcomplete").classList.add("hide");
+    document.querySelector("#levelcomplete").classList.remove("show");
+
 
     // Vis spilskærm
     document.querySelector("#game").classList.add("show");
@@ -125,9 +134,6 @@ function timeLeftFc() {
         gameStatus();
     }
 }
-
-let point = 0;
-let life = 3;
 
 function clickSvamp() {
     console.log("click svamp");
@@ -318,19 +324,21 @@ function musicOn() {
 
 //denne her der skal vurdere om vi har liv tilbage eller mere tid tilbage
 function gameStatus() {
-
+    console.log("gameStatus");
     // her definerer man hvornår man dør, når der er x antal liv tilbage
     if (life <= 0) {
         gameOver();
-    } //else(point == 20) {
-    // gameComplete();
-    //}
+    } else if (timeLeft == 0) {
+        levelCompleted();
+    }
+
 }
 
 //GAME OVER
 
 function gameOver() {
     console.log("game over");
+
 
     // fjern elementer
     document.querySelector("#fluesvamp1").classList.remove("fall_down");
@@ -354,34 +362,9 @@ function gameOver() {
     //click to play again
     document.querySelector("#spiligen_button").addEventListener("click", gotoPlayagain);
 
-}
-
-function gotoMenu() {
-    console.log("go to menu");
-
-    //Fade gameover ud
-    document.querySelector("#gameover").classList.add("fade_out");
-
-    //Fade startskærm ud
-    document.querySelector("#start").classList.remove("fade_out");
-
-    // når fade-animationen er færdig -> showstart
-    document.querySelector("#gameover").addEventListener("animationend", showStart);
-
+    document.querySelector("#menu_button").addEventListener("click", replayFc);
 
 }
-
-function gotoPlayagain() {
-    console.log("go to play again");
-
-    //Fade gameover ud
-    document.querySelector("#gameover").classList.add("fade_out");
-
-    // når fade-animationen er færdig -> showstart
-    document.querySelector("#gameover").addEventListener("animationend", startGame);
-
-}
-
 
 //GAME COMPLETE
 
@@ -406,8 +389,44 @@ function levelCompleted() {
 
 
     // Click to exit
-    document.querySelector("#menu_button").addEventListener("click", gotoMenu);
+    document.querySelector("#menu_button_complete").addEventListener("click", gotoMenu);
     //click to play again
-    document.querySelector("#spiligen_button").addEventListener("click", gotoPlayagain);
+    document.querySelector("#spiligen_button_complete").addEventListener("click", gotoPlayagain);
 
+}
+
+function gotoMenu() {
+    console.log("go to menu");
+
+    //Fade gameover ud
+    document.querySelector("#gameover").classList.add("fade_out");
+    //Fade levelCompleted ud
+    document.querySelector("#levelcomplete").classList.add("fade_out");
+
+    //Fade startskærm ud
+    document.querySelector("#start").classList.remove("fade_out");
+
+    // når fade-animationen er færdig -> showstart
+    document.querySelector("#gameover").addEventListener("animationend", showStart);
+    document.querySelector("#levelcomplete").addEventListener("animationend", showStart);
+
+
+}
+
+function gotoPlayagain() {
+    console.log("go to play again");
+
+    //Fade gameover ud
+    document.querySelector("#gameover").classList.add("fade_out");
+    //Fade levelCompleted ud
+    document.querySelector("#levelcomplete").classList.add("fade_out");
+
+    // når fade-animationen er færdig -> showstart
+    document.querySelector("#gameover").addEventListener("animationend", startGame);
+    document.querySelector("#levelcomplete").addEventListener("animationend", showStart);
+}
+
+function replayFc() {
+    console.log("replay");
+    document.location.href = "";
 }
