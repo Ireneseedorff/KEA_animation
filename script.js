@@ -20,6 +20,8 @@ function showStart() {
     // note i console
     console.log("showStart");
 
+    document.querySelector("#party_lys").classList.add("lys");
+    //document.querySelector("#party_lys_venstre").classList.add("lys");
 
     //Vis startskærm
     document.querySelector("#start").classList.remove("hide");
@@ -33,6 +35,7 @@ function showStart() {
 
     //click to settings
     document.querySelector("#settings_button").addEventListener("click", showSettings);
+
 
 
 
@@ -356,12 +359,7 @@ function gameOver() {
 
     document.querySelector("#gameover").classList.add("show");
 
-
-    // Click to exit
-    document.querySelector("#menu_button").addEventListener("click", gotoMenu);
     //click to play again
-    document.querySelector("#spiligen_button").addEventListener("click", gotoPlayagain);
-
     document.querySelector("#menu_button").addEventListener("click", replayFc);
 
 }
@@ -370,6 +368,8 @@ function gameOver() {
 
 function levelCompleted() {
     console.log("game complete");
+
+    document.querySelector("#fist_sprite").classList.add("up_down");
 
     // fjern elementer
     document.querySelector("#fluesvamp1").classList.remove("fall_down");
@@ -387,43 +387,9 @@ function levelCompleted() {
 
     document.querySelector("#levelcomplete").classList.add("show");
 
-
-    // Click to exit
-    document.querySelector("#menu_button_complete").addEventListener("click", gotoMenu);
     //click to play again
-    document.querySelector("#spiligen_button_complete").addEventListener("click", gotoPlayagain);
+    document.querySelector("#menu_button_complete").addEventListener("click", replayFc);
 
-}
-
-function gotoMenu() {
-    console.log("go to menu");
-
-    //Fade gameover ud
-    document.querySelector("#gameover").classList.add("fade_out");
-    //Fade levelCompleted ud
-    document.querySelector("#levelcomplete").classList.add("fade_out");
-
-    //Fade startskærm ud
-    document.querySelector("#start").classList.remove("fade_out");
-
-    // når fade-animationen er færdig -> showstart
-    document.querySelector("#gameover").addEventListener("animationend", showStart);
-    document.querySelector("#levelcomplete").addEventListener("animationend", showStart);
-
-
-}
-
-function gotoPlayagain() {
-    console.log("go to play again");
-
-    //Fade gameover ud
-    document.querySelector("#gameover").classList.add("fade_out");
-    //Fade levelCompleted ud
-    document.querySelector("#levelcomplete").classList.add("fade_out");
-
-    // når fade-animationen er færdig -> showstart
-    document.querySelector("#gameover").addEventListener("animationend", startGame);
-    document.querySelector("#levelcomplete").addEventListener("animationend", showStart);
 }
 
 function replayFc() {
