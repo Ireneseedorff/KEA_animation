@@ -56,11 +56,9 @@ body {
     }
 
     100% {
-        transform: scale(1);
+        transform: scale(1.1);
     }
 }
-
-
 
 /******** START *********/
 
@@ -136,7 +134,7 @@ body {
     position: absolute;
     color: black;
     left: 4.6vw;
-    top: 51.6vw;
+    top: 52vw;
     font-size: 2.5rem;
     font-family: monospace;
 }
@@ -159,9 +157,9 @@ body {
     z-index: 4;
     position: absolute;
     left: 86vw;
-    top: 50vw;
+    top: 50.5vw;
     color: black;
-    font-size: 2em;
+    font-size: 2.5em;
     font-family: monospace;
 }
 
@@ -541,47 +539,5 @@ body {
 
     100% {
         background-position: -400% 0;
-    }
-}
-
-#party_lys {
-    background-image: url("Lyshojre.svg");
-    background-repeat: no-repeat;
-    background-size: 100%;
-    width: 40vw;
-    height: 40vw;
-    z-index: 4;
-    position: absolute;
-    left: 60vw;
-    top: -3vw;
-}
-
-#party_lys_venstre {
-    background-image: url("Lysvenstre.svg");
-    background-repeat: no-repeat;
-    background-size: 100%;
-    width: 40vw;
-    height: 40vw;
-    z-index: 4;
-    position: absolute;
-    left: 60vw;
-    top: -3vw;
-}
-
-.lys {
-    animation-name: lys_kf;
-    animation-duration: .5s;
-    animation-iteration-count: infinite;
-    animation-direction: alternate-reverse;
-    animation-timing-function: ease-in;
-}
-
-@keyframes lys_kf {
-    0% {
-        transform: rotate(8deg) skewY(17deg);
-    }
-
-    100% {
-        transform: rotate(8deg) skewY(10deg);
     }
 }

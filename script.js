@@ -20,8 +20,8 @@ function showStart() {
     // note i console
     console.log("showStart");
 
-    document.querySelector("#party_lys").classList.add("lys");
-    //document.querySelector("#party_lys_venstre").classList.add("lys");
+    //document.querySelector("#party_lys").classList.add("lys");
+
 
     //Vis startskærm
     document.querySelector("#start").classList.remove("hide");
@@ -36,9 +36,6 @@ function showStart() {
     //click to settings
     document.querySelector("#settings_button").addEventListener("click", showSettings);
 
-
-
-
 }
 
 function hideStart() {
@@ -51,7 +48,6 @@ function hideStart() {
 
     // når fade-animationen er færdig -> startgame
     document.querySelector("#start").addEventListener("animationend", startGame);
-
 
 }
 
